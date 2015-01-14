@@ -14,10 +14,11 @@ module HotelBeds
 
     def call(method:, namespace:, data:)
       message = { namespace => {
+        :@echoToken => "DummyEchoToken",#SecureRandom.hex[0..15],
         :@xmlns => "http://www.hotelbeds.com/schemas/2005/06/messages",
         :"@xmlns:xsi" => "http://www.w3.org/2001/XMLSchema-instance",
         :"@xsi:schemaLocation" => "http://www.hotelbeds.com/schemas/2005/06/messages #{namespace}.xsd",
-        :@echoToken => SecureRandom.hex[0..15],
+        :Language => "ENG",
         :Credentials => {
           User: configuration.username,
           Password: configuration.password

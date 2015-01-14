@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<ServiceAddRS xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hotelbeds.com/schemas/2005/06/messages ServiceAddRS.xsd" echoToken="DummyEchoToken">
+  <AuditData>
+    <ProcessTime>180</ProcessTime>
+    <Timestamp>2015-01-13 20:37:49.090</Timestamp>
+    <RequestHost>107.170.165.30</RequestHost>
+    <ServerName>FORM</ServerName>
+    <ServerId>FO</ServerId>
+    <SchemaRelease>2005/06</SchemaRelease>
+    <HydraCoreRelease>2014.10.IC-SNAPSHOT</HydraCoreRelease>
+    <HydraEnumerationsRelease>N/A</HydraEnumerationsRelease>
+    <MerlinRelease>0</MerlinRelease>
+  </AuditData>
+  <Purchase purchaseToken="O3682821741" timeToExpiration="1799826">
+    <Status>SHOPPING_CART</Status>
+    <Agency>
+      <Code>157127</Code>
+      <Branch>0</Branch>
+    </Agency>
+    <Language>ENG</Language>
+    <CreationUser>COMELIVEINTW157127</CreationUser>
+    <ServiceList>
+      <Service xsi:type="ServiceHotel" SPUI="439#H#1">
+        <Status>NEW</Status>
+        <ContractList>
+          <Contract>
+            <Name>GR-ALL-RO</Name>
+            <IncomingOffice code="439"/>
+            <CommentList>
+              <Comment type="CONTRACT">Children who are under 6 years of age will be sharing existing bed with parents.
+. </Comment>
+            </CommentList>
+          </Contract>
+        </ContractList>
+        <Supplier name="HOTELBEDS (SHANGHAI) COMMERCIAL SERVICE CO" vatNumber=".."/>
+        <DateFrom date="20150313"/>
+        <DateTo date="20150315"/>
+        <Currency code="USD">US Dollar</Currency>
+        <TotalAmount>308.540</TotalAmount>
+        <SupplementList>
+          <Price unitCount="1" paxCount="1">
+            <Amount>53.020</Amount>
+            <DateTimeFrom date="20150313"/>
+            <DateTimeTo date="20150314"/>
+            <Description>EXTRA BED third adult</Description>
+          </Price>
+          <Price unitCount="1" paxCount="1">
+            <Amount>53.020</Amount>
+            <DateTimeFrom date="20150314"/>
+            <DateTimeTo date="20150315"/>
+            <Description>EXTRA BED third adult</Description>
+          </Price>
+        </SupplementList>
+        <AdditionalCostList>
+          <AdditionalCost type="AG_COMMISSION">
+            <Price>
+              <Amount>0.000</Amount>
+            </Price>
+          </AdditionalCost>
+          <AdditionalCost type="COMMISSION_VAT">
+            <Price>
+              <Amount>0.000</Amount>
+            </Price>
+          </AdditionalCost>
+          <AdditionalCost type="COMMISSION_PCT">
+            <Price>
+              <Amount>0.000</Amount>
+            </Price>
+          </AdditionalCost>
+        </AdditionalCostList>
+        <ModificationPolicyList>
+          <ModificationPolicy>Cancellation</ModificationPolicy>
+          <ModificationPolicy>Confirmation</ModificationPolicy>
+          <ModificationPolicy>Modification</ModificationPolicy>
+        </ModificationPolicyList>
+        <HotelInfo xsi:type="ProductHotel">
+          <Code>115929</Code>
+          <Name>Shanghai Grand Trustel Purple Mountain Hotel</Name>
+          <Category type="SIMPLE" code="5EST">5 STARS</Category>
+          <Destination type="SIMPLE" code="PVG">
+            <Name>Shanghai</Name>
+            <ZoneList>
+              <Zone type="SIMPLE" code="1">Pudong</Zone>
+            </ZoneList>
+          </Destination>
+        </HotelInfo>
+        <AvailableRoom>
+          <HotelOccupancy>
+            <RoomCount>1</RoomCount>
+            <Occupancy>
+              <AdultCount>3</AdultCount>
+              <ChildCount>0</ChildCount>
+              <GuestList>
+                <Customer type="AD">
+                  <CustomerId>1</CustomerId>
+                  <Age>30</Age>
+                </Customer>
+                <Customer type="AD">
+                  <CustomerId>2</CustomerId>
+                  <Age>30</Age>
+                </Customer>
+                <Customer type="AD">
+                  <CustomerId>3</CustomerId>
+                  <Age>30</Age>
+                </Customer>
+              </GuestList>
+            </Occupancy>
+          </HotelOccupancy>
+          <HotelRoom SHRUI="aCMkFrAgREh+ot4wRGroyQ==" availCount="1" status="NEW">
+            <Board type="SIMPLE" code="RO-CN3">ROOM ONLY</Board>
+            <RoomType type="SIMPLE" code="DBL-CN3" characteristic="DX">DOUBLE DELUXE</RoomType>
+            <Price>
+              <Amount>202.500</Amount>
+            </Price>
+            <CancellationPolicy>
+              <Price>
+                <Amount>154.270</Amount>
+                <DateTimeFrom date="20150311" time="2359"/>
+                <DateTimeTo date="20150313"/>
+              </Price>
+            </CancellationPolicy>
+          </HotelRoom>
+        </AvailableRoom>
+      </Service>
+    </ServiceList>
+    <Currency code="USD"/>
+    <TotalPrice>308.540</TotalPrice>
+  </Purchase>
+</ServiceAddRS>

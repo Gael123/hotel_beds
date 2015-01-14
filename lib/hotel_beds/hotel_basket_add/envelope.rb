@@ -17,6 +17,7 @@ module HotelBeds
             :DateFrom => { :@date => service.check_in_date.strftime("%Y%m%d") },
             :DateTo => { :@date => service.check_out_date.strftime("%Y%m%d") },
             :HotelInfo => {
+              :"@xsi:type" => "ProductHotel",
               Code: service.hotel_code,
               Destination: {
                 :@code => service.destination_code,
@@ -34,13 +35,15 @@ module HotelBeds
           {
             HotelOccupancy: build_room(rooms),
             HotelRoom: {
+                :"@onRequest" => "N",
+
               Board: {
                 :@code => rooms.first.board_code,
                 :@type => "SIMPLE"
               },
               RoomType: {
-                :@code => rooms.first.room_type_code,
                 :@characteristic => rooms.first.room_type_characteristic,
+                :@code => rooms.first.room_type_code,
                 :@type => "SIMPLE"
               },
             }

@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<HotelValuedAvailRS xmlns="http://www.hotelbeds.com/schemas/2005/06/messages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hotelbeds.com/schemas/2005/06/messages HotelValuedAvailRS.xsd" timeToExpiration="1799997" totalItems="1" echoToken="DummyEchoToken">
+  <AuditData>
+    <ProcessTime>33</ProcessTime>
+    <Timestamp>2015-01-13 21:12:10.113</Timestamp>
+    <RequestHost>107.170.165.30</RequestHost>
+    <ServerName>FORM</ServerName>
+    <ServerId>FO</ServerId>
+    <SchemaRelease>2005/06</SchemaRelease>
+    <HydraCoreRelease>2014.10.IC-SNAPSHOT</HydraCoreRelease>
+    <HydraEnumerationsRelease>N/A</HydraEnumerationsRelease>
+    <MerlinRelease>1</MerlinRelease>
+  </AuditData>
+  <PaginationData currentPage="1" totalPages="1"/>
+  <ServiceHotel xsi:type="ServiceHotel" availToken="1PubndkJq/9nkee6opDKVgkw">
+    <ContractList>
+      <Contract>
+        <Name>GR-ALL-RO</Name>
+        <IncomingOffice code="439"/>
+        <Classification code="NOR">Online Price</Classification>
+      </Contract>
+    </ContractList>
+    <DateFrom date="20150313"/>
+    <DateTo date="20150315"/>
+    <Currency code="USD">US Dollar</Currency>
+    <HotelInfo xsi:type="ProductHotel">
+      <Code>115929</Code>
+      <Name>Shanghai Grand Trustel Purple Mountain Hotel</Name>
+      <ImageList>
+        <Image>
+          <Type>jpg</Type>
+          <Order>1</Order>
+          <VisualizationOrder>1</VisualizationOrder>
+          <Url>http://www.hotelbeds.com/giata/small/11/115929/115929a_hb_a_001.jpg</Url>
+        </Image>
+        <Image>
+          <Type>jpg</Type>
+          <Order>2</Order>
+          <VisualizationOrder>2</VisualizationOrder>
+          <Url>http://www.hotelbeds.com/giata/small/11/115929/115929a_hb_w_002.jpg</Url>
+        </Image>
+      </ImageList>
+      <Category type="SIMPLE" code="5EST" shortname="5*">5 STARS</Category>
+      <Destination type="SIMPLE" code="PVG">
+        <Name>Shanghai</Name>
+        <ZoneList>
+          <Zone type="SIMPLE" code="1">Pudong</Zone>
+        </ZoneList>
+      </Destination>
+      <ChildAge ageFrom="0" ageTo="6"/>
+      <Position latitude="31.22794000000000025352" longitude="121.52352000000000487034"/>
+    </HotelInfo>
+    <AvailableRoom>
+      <HotelOccupancy>
+        <RoomCount>1</RoomCount>
+        <Occupancy>
+          <AdultCount>3</AdultCount>
+          <ChildCount>0</ChildCount>
+        </Occupancy>
+      </HotelOccupancy>
+      <HotelRoom SHRUI="aCMkFrAgREh+ot4wRGroyQ==" availCount="97" onRequest="N">
+        <Board type="SIMPLE" code="RO-CN3" shortname="RO">ROOM ONLY</Board>
+        <RoomType type="SIMPLE" code="DBL-CN3" characteristic="DX">DOUBLE DELUXE</RoomType>
+        <Price>
+          <Amount>308.540</Amount>
+        </Price>
+      </HotelRoom>
+    </AvailableRoom>
+    <AvailableRoom>
+      <HotelOccupancy>
+        <RoomCount>1</RoomCount>
+        <Occupancy>
+          <AdultCount>3</AdultCount>
+          <ChildCount>0</ChildCount>
+        </Occupancy>
+      </HotelOccupancy>
+      <HotelRoom SHRUI="rssuNkM2QSRm6YUbuL9j0Q==" availCount="99" onRequest="N">
+        <Board type="SIMPLE" code="RO-CN3" shortname="RO">ROOM ONLY</Board>
+        <RoomType type="SIMPLE" code="TWN-CN3" characteristic="DX">TWIN DELUXE</RoomType>
+        <Price>
+          <Amount>308.540</Amount>
+        </Price>
+      </HotelRoom>
+    </AvailableRoom>
+    <AvailableRoom>
+      <HotelOccupancy>
+        <RoomCount>1</RoomCount>
+        <Occupancy>
+          <AdultCount>3</AdultCount>
+          <ChildCount>0</ChildCount>
+        </Occupancy>
+      </HotelOccupancy>
+      <HotelRoom SHRUI="cTAQh8qRmxXWxJJqfrzdfA==" availCount="97" onRequest="N">
+        <Board type="SIMPLE" code="BB-CN3" shortname="BB">BED AND BREAKFAST</Board>
+        <RoomType type="SIMPLE" code="DBL-CN3" characteristic="DX">DOUBLE DELUXE</RoomType>
+        <Price>
+          <Amount>369.280</Amount>
+        </Price>
+      </HotelRoom>
+    </AvailableRoom>
+    <AvailableRoom>
+      <HotelOccupancy>
+        <RoomCount>1</RoomCount>
+        <Occupancy>
+          <AdultCount>3</AdultCount>
+          <ChildCount>0</ChildCount>
+        </Occupancy>
+      </HotelOccupancy>
+      <HotelRoom SHRUI="JwINQ5Ce000bFEmnZ+q+lQ==" availCount="99" onRequest="N">
+        <Board type="SIMPLE" code="BB-CN3" shortname="BB">BED AND BREAKFAST</Board>
+        <RoomType type="SIMPLE" code="TWN-CN3" characteristic="DX">TWIN DELUXE</RoomType>
+        <Price>
+          <Amount>369.280</Amount>
+        </Price>
+      </HotelRoom>
+    </AvailableRoom>
+  </ServiceHotel>
+</HotelValuedAvailRS>

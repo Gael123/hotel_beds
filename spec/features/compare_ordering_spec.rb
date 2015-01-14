@@ -11,18 +11,23 @@ RSpec.describe "ordering a hotel room" do
         proxy: ENV.fetch("HOTEL_BEDS_PROXY", nil),
         :enable_logging => true
       })
-      @check_in_date = Date.today + 28 + rand(10)
-      @check_out_date = @check_in_date + rand(3) + rand(2) + 1
+      @check_in_date = Date.new(2015, 03, 13)
+      @check_out_date = Date.new(2015, 03, 15)
       @search_operation = @client.perform_hotel_search({
         check_in_date: @check_in_date,
         check_out_date: @check_out_date,
-        rooms: [{ adult_count: 2 }],
-        destination_code: "SYD"
+        rooms: [{ adult_count: 1 }],
+        hotel_codes: ["115929"],
+        destination_code: "PVG"
       })
       if @search_operation.errors.any?
         raise StandardError, @search_operation.errors.full_messages.join("\n")
       end
       @search_response = @search_operation.response
+
+      f = File.open("comelive_2-HotelValuedAvailRS.xml", "w")
+      f.write(@search_response.body)
+      f.close
 
       hotel = @search_response.hotels.first
       rooms = hotel.available_rooms.first
@@ -44,7 +49,16 @@ RSpec.describe "ordering a hotel room" do
       end
       @basket_response = @basket_operation.response
 
-      @agency_reference = SecureRandom.hex[0..15].upcase
+      f = File.open("comelive_4-ServiceAddRS.xml", "w")
+      f.write(@basket_response.body)
+      f.close
+
+
+
+
+
+
+      @agency_reference = "AgentUnqiueNumber"
       @checkout_operation = @client.confirm_purchase({
         purchase: {
           agency_reference: @agency_reference,
@@ -52,23 +66,36 @@ RSpec.describe "ordering a hotel room" do
           holder: {
             id: "1",
             type: :adult,
-            name: "David",
-            last_name: "Smith",
-            age: "43"
+            name: "TestA",
+            last_name: "TestA",
+            age: "30"
           },
           services: @basket_response.purchase.services.map { |service|
             {
               id: service.id,
               type: service.type,
               customers: [
-                { id: "1", type: :adult, name: "David", last_name: "Smith", age: "43" },
-                { id: "2", type: :adult, name: "Jane", last_name: "Smith", age: "40" }
+                { id: "1", type: :adult, name: "TestA", last_name: "TestA", age: "30" }
+            #,{ id: "2", type: :adult, name: "Jane", last_name: "Smith", age: "40" }
               ]
             }
           }
         }
       })
+
+      @checkout_response = @checkout_operation.response
+      f = File.open("comelive_6-PurchaseConfirmRS.xml", "w")
+      f.write(@basket_response.body)
+      f.close
+
       if @checkout_operation.errors.any?
+        @flush_operation = @client.flush_purchase({
+          purchase_token: @basket_response.purchase.token
+        })
+        if @flush_operation.errors.any?
+          raise StandardError, @flush_operation.errors.full_messages.join("\n")
+        end
+
         raise StandardError, @checkout_operation.errors.full_messages.join("\n")
       end
       @checkout_response = @checkout_operation.response

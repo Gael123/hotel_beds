@@ -30,14 +30,14 @@ module HotelBeds
           RoomCount: rooms.size,
           Occupancy: {
             AdultCount: adult_count,
-            ChildCount: child_count,
-            GuestList: {
-              Customer: 1.upto(adult_count).map {
-                { :@type => "AD" }
-              } + 1.upto(child_count).map { |i|
-                { :@type => "CH", :Age => Integer(child_ages.fetch(i - 1)) }
-              }
-            }
+            ChildCount: child_count#,
+            # GuestList: {
+            #   Customer: 1.upto(adult_count).map {
+            #     { :@type => "AD" }
+            #   } + 1.upto(child_count).map { |i|
+            #     { :@type => "CH", :Age => Integer(child_ages.fetch(i - 1)) }
+            #   }
+            # }
           }
         }
       end

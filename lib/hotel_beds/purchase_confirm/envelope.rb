@@ -5,7 +5,7 @@ module HotelBeds
     class Envelope < HotelBeds::Action::Envelope
       def attributes
         {
-          Language: language,
+          #Language: language,
           ConfirmationData: {
             :"@purchaseToken" => purchase.token,
             :Holder => customer(purchase.holder),
